@@ -14,6 +14,14 @@ public class Cliente {
     private Integer dni, altura;
     private Localidad localidad;
 
+    public Integer getAltura() {
+        return altura;
+    }
+
+    public void setAltura(Integer altura) {
+        this.altura = altura;
+    }
+
     public String getApellido() {
         return apellido;
     }

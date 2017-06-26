@@ -5,6 +5,9 @@
  */
 package factura;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author alumno
@@ -17,6 +20,29 @@ public class Principal {
         
         Cliente unCliente = new Cliente();
         unCliente.setNombre("Manuel");
+        unCliente.setApellido("Perez");
+        unCliente.setCalle("Catamarca");
+        unCliente.setAltura(177);
+        
+        Pais unPais = new Pais();
+        unPais.setNombre("Argentina");
+        
+        Provincia unaProv = new Provincia();
+        unaProv.setNombre("Buenos Aires");
+        unaProv.setPais(unPais);
+        
+        Partido unPartido = new Partido();
+        unPartido.setNombre("San Martin");
+        unPartido.setProvincia(unaProv);
+        
+        Localidad unaLoc = new Localidad();
+        unaLoc.setNombre("Ballester");
+        unaLoc.setPartido(unPartido);
+        
+        unCliente.setLocalidad(unaLoc);
+        
+        
+        
         
         FormaCobro unFormaCobro = new FormaCobro();
         unFormaCobro.setNombre("Visa");
@@ -51,6 +77,7 @@ public class Principal {
     
         System.out.println(unaFactura.getItemFactura().get(0).getItem_factura().getPrecio());
         
+        System.out.println(unaFactura.getCliente().getLocalidad().getPartido().getNombre());
         
     }
 
