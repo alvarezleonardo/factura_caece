@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package factura;
-
+import visual.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +17,9 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Menu unMenu = new Menu();
         
+        /*
         Cliente unCliente = new Cliente();
         unCliente.setNombre("Manuel");
         unCliente.setApellido("Perez");
@@ -78,7 +80,7 @@ public class Principal {
         System.out.println(unaFactura.getItemFactura().get(0).getItem_factura().getPrecio());
         
         System.out.println(unaFactura.getCliente().getLocalidad().getPartido().getNombre());
-        
+        */
     }
 
 }
